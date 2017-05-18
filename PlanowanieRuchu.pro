@@ -25,12 +25,15 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    dialog.cpp \
-    qcustomplot.cpp
+    qcustomplot.cpp \
+    trajectory.cpp \
+    mobilerobot.cpp \
+    unicycle.cpp
 
 HEADERS  += mainwindow.h \
-    dialog.h \
-    qcustomplot.h
+    qcustomplot.h \
+    trajectory.h \
+    mobilerobot.h \
+    unicycle.h
 
-FORMS    += mainwindow.ui \
-    dialog.ui
+FORMS    += mainwindow.ui
