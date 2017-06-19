@@ -35,8 +35,8 @@
    <widget class="QPushButton" name="buttonOblicz">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>540</y>
+      <x>110</x>
+      <y>160</y>
       <width>85</width>
       <height>27</height>
      </rect>
@@ -51,7 +51,7 @@
       <x>10</x>
       <y>10</y>
       <width>291</width>
-      <height>101</height>
+      <height>128</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
@@ -76,7 +76,10 @@
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QDoubleSpinBox" name="doubleSpinBox">
+      <widget class="QDoubleSpinBox" name="timeBox">
+       <property name="minimum">
+        <double>0.010000000000000</double>
+       </property>
        <property name="singleStep">
         <double>0.010000000000000</double>
        </property>
@@ -107,9 +110,12 @@
       </widget>
      </item>
      <item row="2" column="1">
-      <widget class="QSpinBox" name="spinBox">
+      <widget class="QSpinBox" name="numberBox">
+       <property name="minimum">
+        <number>1</number>
+       </property>
        <property name="maximum">
-        <number>100</number>
+        <number>1000</number>
        </property>
       </widget>
      </item>
@@ -124,9 +130,9 @@
       </widget>
      </item>
      <item row="3" column="1">
-      <widget class="QSpinBox" name="spinBox_2">
+      <widget class="QSpinBox" name="startBox">
        <property name="maximum">
-        <number>400</number>
+        <number>4</number>
        </property>
       </widget>
      </item>
@@ -136,11 +142,109 @@
     <property name="geometry">
      <rect>
       <x>310</x>
-      <y>20</y>
+      <y>50</y>
       <width>581</width>
-      <height>551</height>
+      <height>501</height>
      </rect>
     </property>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>10</y>
+      <width>80</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="l_label">
+       <property name="text">
+        <string>l=</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDoubleSpinBox" name="l_box">
+       <property name="minimum">
+        <double>0.100000000000000</double>
+       </property>
+       <property name="maximum">
+        <double>50.000000000000000</double>
+       </property>
+       <property name="singleStep">
+        <double>0.010000000000000</double>
+       </property>
+       <property name="value">
+        <double>1.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>310</y>
+      <width>291</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="finalPositionLayout" columnminimumwidth="0"/>
+   </widget>
+   <widget class="QPushButton" name="NormalZoom">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>10</y>
+      <width>111</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Initial Zoom</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="TargetedZoom">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>10</y>
+      <width>101</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Targeted Zoom</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>440</y>
+      <width>201</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>Position Error</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="positionError">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -149,7 +253,7 @@
      <x>0</x>
      <y>0</y>
      <width>900</width>
-     <height>18</height>
+     <height>27</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuPlik">

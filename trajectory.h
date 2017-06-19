@@ -8,7 +8,9 @@ class Trajectory
 public:
     QVector <QVector<double> > traj;
 
-    Trajectory(int stateVectorLength, double timespan, double step);
+    Trajectory(int stateVectorLength, double timeOfStep, int numberOfStep);
+
+    void addTrajectory(const Trajectory* Traj);
 
 };
 

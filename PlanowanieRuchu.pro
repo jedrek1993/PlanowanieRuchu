@@ -28,12 +28,18 @@ SOURCES += main.cpp\
     qcustomplot.cpp \
     trajectory.cpp \
     mobilerobot.cpp \
-    unicycle.cpp
+    unicycle.cpp \
+    cbhdprocedure.cpp \
+    kinematiccar.cpp
 
 HEADERS  += mainwindow.h \
     qcustomplot.h \
     trajectory.h \
     mobilerobot.h \
-    unicycle.h
+    unicycle.h \
+    cbhdprocedure.h \
+    kinematiccar.h
 
 FORMS    += mainwindow.ui
+
+QMAKE_CXXFLAGS += -std=c++11

@@ -8,11 +8,13 @@
 class Unicycle : public MobileRobot
 {
 public:
+    Unicycle();
+
     Unicycle(QVector<double> qstart);
 
-    QVector<double> dx();
+    QVector<double> dq(QVector <double> deltaQ);
 
-    Trajectory* executeMotion(double time, int control, double value);
+    QVector<double> dqLie(QVector <double> deltaQ);
 
 
 };
